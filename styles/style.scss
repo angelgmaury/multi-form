@@ -1,0 +1,265 @@
+*{
+    font-family: "ubuntu";
+}
+
+.header{
+    background: url(./images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .status{
+        background: hsl(206, 94%, 87%);
+        color: hsl(213, 96%, 18%);
+        border: none;
+    }
+}
+
+
+
+.numbers{
+    border: solid 1px white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.error{
+    border: solid 1px hsl(0, 100%, 50%);
+    border-radius: 6px;
+    padding: 10px;
+    outline: none;
+}
+
+.txtErrorName{
+    display: none;
+}
+.txtErrorEmail{
+    display: none;
+}
+.txtErrorPhone{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.desactive{
+    display: none;
+}
+.sectionForm{
+    width: 90%;
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .formulario{
+        .label{
+            cursor: pointer;
+        }
+        .inputs{
+            border: solid 1px hsl(231, 11%, 63%);
+            border-radius: 6px;
+            padding: 10px;
+            outline: none;
+            &::placeholder{
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .btn{
+        position: absolute;
+        right: 0;
+        top: 570px;
+        padding: 12px;
+        border-radius: 5px;
+    }
+    .btnBack{
+        position: absolute;
+        left: 0;
+        top: 580px;
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+}   
+
+
+.vibrate{animation:vibrate 1.5s linear both} @keyframes vibrate{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}
+
+.desactive{
+    display: none;
+}
+
+.sectionPlan{
+    @extend .sectionForm;
+    .planSelect label{
+        .desactive{
+            display: none;
+        }
+        
+    }
+    .labelSelect{
+        cursor: pointer;
+        padding: 10px;
+        border: solid 1px hsl(231, 11%, 63%);
+        border-radius: 10px;
+    }
+    #selectArcade:checked~ .selectArcade{
+        border: solid 1px hsl(243, 100%, 62%);
+    }
+    #selectArcade{
+        display: none;
+    }
+    #selectAdvanced:checked~ .selectAdvanced{
+        border: solid 1px hsl(243, 100%, 62%);
+    }
+    #selectAdvanced{
+        display: none;
+    }
+    #selectPro:checked~ .selectPro{
+        border: solid 1px hsl(243, 100%, 62%);
+    }
+    #selectPro{
+        display: none;
+    }
+    .selectPrice{
+        margin-bottom: 40px;
+        .labelPrice{
+            width: 50px;
+            height: 25px;
+            background-color: hsl(223, 31%, 20%);
+            cursor: pointer;
+            position: relative;
+            border-radius: 40px;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 18px;
+                height:18px;
+                background-color: white;
+                border-radius: 100px;
+                top: 3.8px;
+                transition: all .5s;
+                left: 5px;
+            }
+        }
+        #btnCheck{
+            display: none;
+        }
+
+        #btnCheck:checked ~ .year{
+            color: hsl(213, 96%, 18%);
+        }
+        #btnCheck:checked ~ .month{
+            color: hsl(213, 96%, 18%);
+        }
+        #btnCheck:checked~ .labelPrice::after{
+            left: 25px;
+        }
+    }
+}
+
+.sectionPickAddons{
+    @extend .sectionPlan;
+    .addons{
+        label{
+            border: solid 1px hsl(231, 11%, 63%);
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 100%;
+            #check{
+                background: transparent;
+                
+                img{
+                    height: 15px;
+                }
+            }
+            #check2{
+                img{
+                    height: 15px;
+                }
+            }
+            #check3{
+                img{
+                    height: 15px;
+                }
+            }
+        }
+        
+        input{
+            display: none;
+        }
+        #selectAddonOnline:checked~ .lblAddonOnline{
+            border: solid 1px hsl(243, 100%, 62%);
+            #check{
+                background-color: hsl(243, 100%, 62%);
+            }
+        }
+        #selectAddonStorage:checked~ .lblAddonStorage{
+            border: solid 1px hsl(243, 100%, 62%);
+            #check2{
+                background-color: hsl(243, 100%, 62%);
+            }
+        }
+        #selectAddonCustom:checked~ .lblAddonCustom{
+            border: solid 1px hsl(243, 100%, 62%);
+            #check3{
+                background-color: hsl(243, 100%, 62%);
+            }
+        }
+    }
+
+    .btnBack2{
+        position: absolute;
+        left: 0;
+        top: 580px;
+    }
+
+    .btn2{
+        position: absolute;
+        right: 0;
+        top: 570px;
+        padding: 12px;
+        border-radius: 5px;
+    }
+}
+
+.sectionFinish{
+    @extend .sectionPickAddons;
+    .todos-los-servicios{
+        padding: 20px;
+        padding-top: 30px;
+        box-shadow: 0px 10px 11px -2px rgba(0,0,0,0.40);
+    }
+    .planSelects{
+        .planSelecting{
+            .changePlan{
+                text-decoration:underline 2px solid;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.sectionConfirming{
+    @extend .sectionFinish;
+    padding: 50px;
+    width: 90%;
+    .imgConfirming{
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

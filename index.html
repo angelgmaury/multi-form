@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./styles/images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Multi-step form</title>
+</head>
+<body>
+
+            <!-- Numbers Section -->
+
+  <header class="header flex w-screen h-40 justify-evenly pt-8">
+
+    <div class="flex bg-trasparent numbers justify-center items-center status" id="numberOne">1</div>
+
+    <div class="flex bg-trasparent numbers justify-center items-center" id="numberTwo">2</div>
+
+    <div class="flex bg-trasparent numbers justify-center items-center" id="numberThree">3</div>
+
+    <div class="flex bg-trasparent numbers justify-center items-center" id="numberFour">4</div>
+  </header>
+            <!-- 1era pag -->
+
+  <section class="sectionForm flex flex-col id="sectionForm">
+
+      <h1 class="text-3xl font-bold text-marineBlue mb-4" id="title">Personal Info</h1>
+      <p class="infoForm text-coolGray font-medium mb-4">Please provide your name, email address and phone number.</p>
+
+      <div class="formulario flex flex-col">
+
+        <label for="name" class="label text-marineBlue mb-1 mt-3">Name</label>
+        <input type="text" id="name" placeholder="e.g Stephen King" class="inputs" maxlength="19" autocomplete="off">
+        <p class="txtErrorName text-red-600 font-bold text-sm mt-2">fill in the field correctly</p>
+
+        <label for="email" class="label text-marineBlue mb-1 mt-3">Email Address</label>
+        <input type="text" id="email" placeholder="e.g stephenking@lorem.com" maxlength="25" autocomplete="off"
+        class="inputs">
+        <p class="txtErrorEmail text-red-600 font-bold text-sm mt-2">fill in the field correctly</p>
+
+        <label for="numberPhone" class="label text-marineBlue mb-1 mt-3">Phone Number</label>
+        <input type="text" id="numberPhone" placeholder="e.g +1 234 567 890" maxlength="15"
+        class="inputs">
+        <p class="txtErrorPhone text-red-600 font-bold text-sm mt-2">fill in the field correctly</p>
+
+      </div>
+
+      <p class="mt-20 text-red-800 font-bold text-base text-center desactive txtError1raPag">Completar los campos es obligatorio.</p>
+
+      <button class="bg-marineBlue text-white font-medium text-base btn" id="btn">Next Step</button>
+  </section>
+
+            <!-- 2da pag -->
+
+  <section class="sectionPlan desactive">
+    <h1 class="text-3xl font-bold text-marineBlue mb-4" id="title">Select Your Plan</h1>
+    <p class="infoForm text-coolGray font-medium mb-4">You have the option of monthly or yearly biling.</p>
+
+    <div class="planSelect">
+      <input type="checkbox" id="selectArcade">
+
+      <label for="selectArcade" class="flex items-center labelSelect selectArcade my-4">
+        <img src="./styles/images/icon-arcade.svg">
+        <div class="ml-5 yourPlan">
+          <h2 class="text-marineBlue font-medium text-xl">Arcade</h2>
+          <p class="priceArcade text-coolGray font-medium">$9/mo</p>
+          <p class="text-marineBlue txtFreeArcade desactive">2 months free</p>
+        </div>
+      </label>
+
+      <input type="checkbox" id="selectAdvanced">
+
+      <label for="selectAdvanced" class="flex items-center labelSelect selectAdvanced my-4">
+        <img src="./styles/images/icon-advanced.svg">
+        <div class="ml-5 yourPlan">
+          <h2 class="text-marineBlue font-medium text-xl">Advanced</h2>
+          <p class="priceAdvanced text-coolGray font-medium">$<span class="numberAdvanced">12</span>/mo</p>
+          <p class="text-marineBlue txtFreeAdvanced desactive">2 months free</p>
+        </div>
+      </label>
+
+      <input type="checkbox" id="selectPro">
+
+      <label for="selectPro" class="flex items-center labelSelect  selectPro my-4 mb-6">
+        <img src="./styles/images/icon-pro.svg">
+        <div class="ml-5 yourPlan">
+          <h2 class="text-marineBlue font-medium text-xl">Pro</h2>
+          <p class="pricePro text-coolGray font-medium">$<span class="numberAdvanced">15</span>/mo</p>
+          <p class="text-marineBlue txtFreePro desactive">2 months free</p>
+        </div>
+      </label>
+
+    </div>
+
+    <div class="selectPrice flex justify-evenly mr-4 mb-2">
+      <input type="checkbox" id="btnCheck">
+      <label for="btnCheck" class="labelPrice"></label>
+      <p class="font-bold text-marineBlue month">Monthly</p>
+      <p class="font-bold text-coolGray year">Year</p>
+    </div>
+
+    <p class="text-red-800 font-bold text-base text-center desactive txtError2raPag">Completar los campos es obligatorio.</p>
+
+    <button class="bg-marineBlue text-white font-medium text-base btn mt-4" id="btn2">Next Step</button>
+      
+    <button class="text-coolGray font-medium text-base btnBack mt-4" id="btnBack">Go Back</button>
+  </section>
+  
+            <!-- 3ra pag -->
+
+  <section class="sectionPickAddons desactive">
+    <h1 class="text-3xl font-bold text-marineBlue mb-4" id="title">Pick add-ons</h1>
+    <p class="infoForm text-coolGray font-medium mb-4">Add-ons help enhance your gaming experience.</p>
+    
+    <div class="addons">
+
+      <!-- 1er Addon -->
+      <input type="checkbox" id="selectAddonOnline">
+
+      <label for="selectAddonOnline" class="flex items-center my-4 lblAddonOnline p-2 justify-between">
+
+        <div class=" flex flex-col justify-center mx-2">
+          <h2 class="text-marineBlue font-medium text-xl">Online service</h2>
+          <p class="text-coolGray font-bold text-xs">Access to multiplayer games</p>
+        </div>
+        <div class="justify-end">
+          <p class="text-purplishBlue txtPriceOn">+$1/mo</p>
+        </div>
+      </label>
+
+
+      <!-- 2do Addon -->
+      <input type="checkbox" id="selectAddonStorage">
+
+      <label for="selectAddonStorage" class="flex items-center my-4 lblAddonStorage p-2 justify-between">
+
+        <div class="flex flex-col justify-center mx-2">
+          <h2 class="text-marineBlue font-medium text-xl">Large storage</h2>
+          <p class="text-coolGray font-bold text-xs">Extra 1TB of cloud save</p>
+        </div>
+        <div class="justify-end">
+          <p class="text-purplishBlue txtPriceSt">+$2/mo</p>
+        </div>
+      </label>
+
+      
+      <!-- 3er Addon -->
+      <input type="checkbox" id="selectAddonCustom">
+
+      <label for="selectAddonCustom" class="flex items-center my-4 lblAddonCustom p-2 justify-between">
+
+        <div class="flex flex-col justify-center mx-2">
+          <h2 class="text-marineBlue font-medium text-xl">Customizable profile</h2>
+          <p class="text-coolGray font-bold text-xs">Custom theme on your profile</p>
+        </div>
+        <div class="justify-end">
+          <p class="text-purplishBlue txtPriceCp">+$3/mo</p>
+        </div>
+      </label>
+    </div>
+    <button class="bg-marineBlue text-white font-medium text-base btn2 mt-4" id="btn3">Next Step</button>
+      
+    <button class="text-coolGray font-medium text-base btnBack2 mt-4" id="btnBack2">Go Back</button>
+  </section>
+
+
+  <!-- 4ta Pag -->
+  <section class="sectionFinish desactive">
+    <h1 class="text-3xl font-bold text-marineBlue mb-4" id="title">Finishing up</h1>
+    <p class="text-coolGray font-medium mb-4">Double-check everything looks OK before confirming.</p>
+    <div class="todos-los-servicios">
+      <!-- plan seleccionado. -->
+
+      <div class="planSelects flex justify-between items-center mb-2 desactive">
+        <div class="planSelecting">
+          <p class="namePlan text-marineBlue font-bold text-xl">Arcade<span class="modePlan">()</span></p>
+          <p class="changePlan text-coolGray">Change</p>
+        </div>
+        <p class="pricePlan text-marineBlue font-bold">$9/mo</p>
+      </div>
+
+      <hr noshade="noshade" class="mb-4">
+
+      <!-- servicios seleccionados -->
+
+        <div class="firstService flex justify-between desactive">
+          <div class="nameService">
+            <p class="text-coolGray">Online service</p>
+          </div>
+          <p class="priceService1 text-marineBlue">+$1/mo</p>
+        </div>
+
+      <div class="twoService flex justify-between my-2 desactive">
+        <div class="nameService">
+          <p class="text-coolGray">Larger storage</p>
+        </div>
+        <p class="priceService2 text-marineBlue">+$2/mo</p>
+      </div>
+
+      <div class="threeService flex justify-between my-2 desactive">
+        <div class="nameService">
+          <p class="text-coolGray">Customizable profile</p>
+        </div>
+        <p class="priceService3 text-marineBlue">+$3/mo</p>
+      </div>
+
+      <div class="totalPrice flex justify-between items-center mt-10">
+          <div class="total">
+            <p class="text-coolGray">Total <span class="modePlanTotal">()</span></p>
+          </div>
+          <p class="sumTotal text-purplishBlue font-bold"><span class="signo"></span></p>
+          
+      </div>
+
+      <button class="bg-purplishBlue text-white font-medium text-base btn2 mt-2" id="btn4">Confirm</button>
+      
+      <button class="text-coolGray font-medium text-base btnBack2 mt-2" id="btnBack3">Go Back</button>
+
+    </div>
+  </section>
+
+
+  <!-- confirming -->
+  <section class="sectionConfirming text-center desactive">
+    <img src="./styles/images/icon-thank-you.svg" alt="" class="imgConfirming mb-6">
+    <h1 class="text-marineBlue font-bold text-2xl">Thank you!</h1>
+    <p class="text-coolGray textComplete">Thanks for confirming your subscription!  
+      We hope you have fun using uour plataform. If your ever need support please feel free to email us at 
+      <br>
+      support@loremgaming.com
+    </p>
+  </section>
+
+
+
+
+  <script src="./script/main.js"></script>
+
+</body>
+</html>
