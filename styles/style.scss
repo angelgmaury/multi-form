@@ -306,6 +306,12 @@
             }
             
         }
+        .activeSectionConfirming{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .containerSections{
             width: 90%;
             height: 70%;
@@ -337,12 +343,6 @@
                 .btn2{
                     top: 510px;
                 }
-            }
-            .sectionConfirming{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
             }
         }
         

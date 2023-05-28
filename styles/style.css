@@ -292,6 +292,12 @@
   .containerPrincipal .header .containNumber div {
     margin: 20px 0px 20px 20px;
   }
+  .containerPrincipal .activeSectionConfirming {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .containerPrincipal .containerSections {
     width: 90%;
     height: 70%;
@@ -318,12 +324,6 @@
   }
   .containerPrincipal .containerSections .sectionFinish .btn2, .containerPrincipal .containerSections .sectionConfirming .btn2 {
     top: 510px;
-  }
-  .containerPrincipal .containerSections .sectionConfirming {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 

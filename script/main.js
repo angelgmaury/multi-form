@@ -69,6 +69,7 @@ let sectionPlan = document.querySelector(".sectionPlan");
 let sectionPickAddons = document.querySelector(".sectionPickAddons");
 let sectionFinish = document.querySelector(".sectionFinish");
 let sectionConfirming = document.querySelector(".sectionConfirming");
+sectionConfirming.classList.remove("activeSectionConfirming");
 let numberOne = document.getElementById("numberOne");
 let numberTwo = document.getElementById("numberTwo");
 let numberThree = document.getElementById("numberThree");
@@ -340,10 +341,10 @@ btnBack3.addEventListener("click", () => {
 
 btnNext4.addEventListener("click", () => {
   sectionConfirming.classList.remove("desactive");
+  sectionConfirming.classList.add("activeSectionConfirming");
   sectionFinish.classList.add("desactive");
   setTimeout(() => {
     location.reload();
-    numberPhone.value = "";
   }, 4000);
 });
 if (location.reload) {
