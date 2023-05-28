@@ -1,14 +1,19 @@
 * {
-  font-family: "ubuntu"; }
+  font-family: "ubuntu";
+}
 
 .header {
   background: url(./images/bg-sidebar-mobile.svg);
   background-size: cover;
-  background-repeat: no-repeat; }
-  .header .status {
-    background: #bfe2fd;
-    color: #02295a;
-    border: none; }
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .status {
+  background: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+  border: none;
+}
 
 .numbers {
   border: solid 1px white;
@@ -17,28 +22,35 @@
   border-radius: 50%;
   font-weight: bold;
   font-size: 18px;
-  color: white; }
+  color: white;
+}
 
 .error {
-  border: solid 1px red;
+  border: solid 1px hsl(0, 100%, 50%);
   border-radius: 6px;
   padding: 10px;
-  outline: none; }
+  outline: none;
+}
 
 .txtErrorName {
-  display: none; }
+  display: none;
+}
 
 .txtErrorEmail {
-  display: none; }
+  display: none;
+}
 
 .txtErrorPhone {
-  display: none; }
+  display: none;
+}
 
 .active {
-  display: block; }
+  display: block;
+}
 
 .desactive {
-  display: none; }
+  display: none;
+}
 
 .sectionForm, .sectionPlan, .sectionPickAddons, .sectionFinish, .sectionConfirming {
   width: 90%;
@@ -49,150 +61,270 @@
   position: fixed;
   top: 65%;
   left: 50%;
-  transform: translate(-50%, -50%); }
-  .sectionForm .formulario .label, .sectionPlan .formulario .label, .sectionPickAddons .formulario .label, .sectionFinish .formulario .label, .sectionConfirming .formulario .label {
-    cursor: pointer; }
-  .sectionForm .formulario .inputs, .sectionPlan .formulario .inputs, .sectionPickAddons .formulario .inputs, .sectionFinish .formulario .inputs, .sectionConfirming .formulario .inputs {
-    border: solid 1px #9699ab;
-    border-radius: 6px;
-    padding: 10px;
-    outline: none; }
-    .sectionForm .formulario .inputs::placeholder, .sectionPlan .formulario .inputs::placeholder, .sectionPickAddons .formulario .inputs::placeholder, .sectionFinish .formulario .inputs::placeholder, .sectionConfirming .formulario .inputs::placeholder {
-      font-weight: 500; }
-  .sectionForm .btn, .sectionPlan .btn, .sectionPickAddons .btn, .sectionFinish .btn, .sectionConfirming .btn {
-    position: absolute;
-    right: 0;
-    top: 570px;
-    padding: 12px;
-    border-radius: 5px; }
-  .sectionForm .btnBack, .sectionPlan .btnBack, .sectionPickAddons .btnBack, .sectionFinish .btnBack, .sectionConfirming .btnBack {
-    position: absolute;
-    left: 0;
-    top: 580px;
-    display: none; }
-  .sectionForm .active, .sectionPlan .active, .sectionPickAddons .active, .sectionFinish .active, .sectionConfirming .active {
-    display: block; }
+  transform: translate(-50%, -50%);
+}
+.sectionForm .formulario .label, .sectionPlan .formulario .label, .sectionPickAddons .formulario .label, .sectionFinish .formulario .label, .sectionConfirming .formulario .label {
+  cursor: pointer;
+}
+.sectionForm .formulario .inputs, .sectionPlan .formulario .inputs, .sectionPickAddons .formulario .inputs, .sectionFinish .formulario .inputs, .sectionConfirming .formulario .inputs {
+  border: solid 1px hsl(231, 11%, 63%);
+  border-radius: 6px;
+  padding: 10px;
+  outline: none;
+}
+.sectionForm .formulario .inputs::placeholder, .sectionPlan .formulario .inputs::placeholder, .sectionPickAddons .formulario .inputs::placeholder, .sectionFinish .formulario .inputs::placeholder, .sectionConfirming .formulario .inputs::placeholder {
+  font-weight: 500;
+}
+.sectionForm .btn, .sectionPlan .btn, .sectionPickAddons .btn, .sectionFinish .btn, .sectionConfirming .btn {
+  position: absolute;
+  right: 0;
+  top: 570px;
+  padding: 12px;
+  border-radius: 5px;
+}
+.sectionForm .btnBack, .sectionPlan .btnBack, .sectionPickAddons .btnBack, .sectionFinish .btnBack, .sectionConfirming .btnBack {
+  position: absolute;
+  left: 0;
+  top: 580px;
+  display: none;
+}
+.sectionForm .active, .sectionPlan .active, .sectionPickAddons .active, .sectionFinish .active, .sectionConfirming .active {
+  display: block;
+}
 
 .vibrate {
-  animation: vibrate 1.5s linear both; }
+  animation: vibrate 1.5s linear both;
+}
 
 @keyframes vibrate {
   0% {
-    transform: translate(0); }
+    transform: translate(0);
+  }
   20% {
-    transform: translate(-2px, 2px); }
+    transform: translate(-2px, 2px);
+  }
   40% {
-    transform: translate(-2px, -2px); }
+    transform: translate(-2px, -2px);
+  }
   60% {
-    transform: translate(2px, 2px); }
+    transform: translate(2px, 2px);
+  }
   80% {
-    transform: translate(2px, -2px); }
+    transform: translate(2px, -2px);
+  }
   100% {
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 .desactive {
-  display: none; }
+  display: none;
+}
 
 .sectionPlan .planSelect label .desactive, .sectionPickAddons .planSelect label .desactive, .sectionFinish .planSelect label .desactive, .sectionConfirming .planSelect label .desactive {
-  display: none; }
+  display: none;
+}
 .sectionPlan .labelSelect, .sectionPickAddons .labelSelect, .sectionFinish .labelSelect, .sectionConfirming .labelSelect {
   cursor: pointer;
   padding: 10px;
-  border: solid 1px #9699ab;
-  border-radius: 10px; }
+  border: solid 1px hsl(231, 11%, 63%);
+  border-radius: 10px;
+}
 .sectionPlan #selectArcade:checked ~ .selectArcade, .sectionPickAddons #selectArcade:checked ~ .selectArcade, .sectionFinish #selectArcade:checked ~ .selectArcade, .sectionConfirming #selectArcade:checked ~ .selectArcade {
-  border: solid 1px #473dff; }
+  border: solid 1px hsl(243, 100%, 62%);
+}
 .sectionPlan #selectArcade, .sectionPickAddons #selectArcade, .sectionFinish #selectArcade, .sectionConfirming #selectArcade {
-  display: none; }
+  display: none;
+}
 .sectionPlan #selectAdvanced:checked ~ .selectAdvanced, .sectionPickAddons #selectAdvanced:checked ~ .selectAdvanced, .sectionFinish #selectAdvanced:checked ~ .selectAdvanced, .sectionConfirming #selectAdvanced:checked ~ .selectAdvanced {
-  border: solid 1px #473dff; }
+  border: solid 1px hsl(243, 100%, 62%);
+}
 .sectionPlan #selectAdvanced, .sectionPickAddons #selectAdvanced, .sectionFinish #selectAdvanced, .sectionConfirming #selectAdvanced {
-  display: none; }
+  display: none;
+}
 .sectionPlan #selectPro:checked ~ .selectPro, .sectionPickAddons #selectPro:checked ~ .selectPro, .sectionFinish #selectPro:checked ~ .selectPro, .sectionConfirming #selectPro:checked ~ .selectPro {
-  border: solid 1px #473dff; }
+  border: solid 1px hsl(243, 100%, 62%);
+}
 .sectionPlan #selectPro, .sectionPickAddons #selectPro, .sectionFinish #selectPro, .sectionConfirming #selectPro {
-  display: none; }
+  display: none;
+}
 .sectionPlan .selectPrice, .sectionPickAddons .selectPrice, .sectionFinish .selectPrice, .sectionConfirming .selectPrice {
-  margin-bottom: 40px; }
-  .sectionPlan .selectPrice .labelPrice, .sectionPickAddons .selectPrice .labelPrice, .sectionFinish .selectPrice .labelPrice, .sectionConfirming .selectPrice .labelPrice {
-    width: 50px;
-    height: 25px;
-    background-color: #232c43;
-    cursor: pointer;
-    position: relative;
-    border-radius: 40px; }
-    .sectionPlan .selectPrice .labelPrice::after, .sectionPickAddons .selectPrice .labelPrice::after, .sectionFinish .selectPrice .labelPrice::after, .sectionConfirming .selectPrice .labelPrice::after {
-      position: absolute;
-      content: "";
-      width: 18px;
-      height: 18px;
-      background-color: white;
-      border-radius: 100px;
-      top: 3.8px;
-      transition: all .5s;
-      left: 5px; }
-  .sectionPlan .selectPrice #btnCheck, .sectionPickAddons .selectPrice #btnCheck, .sectionFinish .selectPrice #btnCheck, .sectionConfirming .selectPrice #btnCheck {
-    display: none; }
-  .sectionPlan .selectPrice #btnCheck:checked ~ .year, .sectionPickAddons .selectPrice #btnCheck:checked ~ .year, .sectionFinish .selectPrice #btnCheck:checked ~ .year, .sectionConfirming .selectPrice #btnCheck:checked ~ .year {
-    color: #02295a; }
-  .sectionPlan .selectPrice #btnCheck:checked ~ .month, .sectionPickAddons .selectPrice #btnCheck:checked ~ .month, .sectionFinish .selectPrice #btnCheck:checked ~ .month, .sectionConfirming .selectPrice #btnCheck:checked ~ .month {
-    color: #02295a; }
-  .sectionPlan .selectPrice #btnCheck:checked ~ .labelPrice::after, .sectionPickAddons .selectPrice #btnCheck:checked ~ .labelPrice::after, .sectionFinish .selectPrice #btnCheck:checked ~ .labelPrice::after, .sectionConfirming .selectPrice #btnCheck:checked ~ .labelPrice::after {
-    left: 25px; }
+  margin-bottom: 40px;
+}
+.sectionPlan .selectPrice .labelPrice, .sectionPickAddons .selectPrice .labelPrice, .sectionFinish .selectPrice .labelPrice, .sectionConfirming .selectPrice .labelPrice {
+  width: 50px;
+  height: 25px;
+  background-color: hsl(223, 31%, 20%);
+  cursor: pointer;
+  position: relative;
+  border-radius: 40px;
+}
+.sectionPlan .selectPrice .labelPrice::after, .sectionPickAddons .selectPrice .labelPrice::after, .sectionFinish .selectPrice .labelPrice::after, .sectionConfirming .selectPrice .labelPrice::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 100px;
+  top: 3.8px;
+  transition: all 0.5s;
+  left: 5px;
+}
+.sectionPlan .selectPrice #btnCheck, .sectionPickAddons .selectPrice #btnCheck, .sectionFinish .selectPrice #btnCheck, .sectionConfirming .selectPrice #btnCheck {
+  display: none;
+}
+.sectionPlan .selectPrice #btnCheck:checked ~ .year, .sectionPickAddons .selectPrice #btnCheck:checked ~ .year, .sectionFinish .selectPrice #btnCheck:checked ~ .year, .sectionConfirming .selectPrice #btnCheck:checked ~ .year {
+  color: hsl(213, 96%, 18%);
+}
+.sectionPlan .selectPrice #btnCheck:checked ~ .month, .sectionPickAddons .selectPrice #btnCheck:checked ~ .month, .sectionFinish .selectPrice #btnCheck:checked ~ .month, .sectionConfirming .selectPrice #btnCheck:checked ~ .month {
+  color: hsl(213, 96%, 18%);
+}
+.sectionPlan .selectPrice #btnCheck:checked ~ .labelPrice::after, .sectionPickAddons .selectPrice #btnCheck:checked ~ .labelPrice::after, .sectionFinish .selectPrice #btnCheck:checked ~ .labelPrice::after, .sectionConfirming .selectPrice #btnCheck:checked ~ .labelPrice::after {
+  left: 25px;
+}
 
 .sectionPickAddons .addons label, .sectionFinish .addons label, .sectionConfirming .addons label {
-  border: solid 1px #9699ab;
+  border: solid 1px hsl(231, 11%, 63%);
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 10px;
-  width: 100%; }
-  .sectionPickAddons .addons label #check, .sectionFinish .addons label #check, .sectionConfirming .addons label #check {
-    background: transparent; }
-    .sectionPickAddons .addons label #check img, .sectionFinish .addons label #check img, .sectionConfirming .addons label #check img {
-      height: 15px; }
-  .sectionPickAddons .addons label #check2 img, .sectionFinish .addons label #check2 img, .sectionConfirming .addons label #check2 img {
-    height: 15px; }
-  .sectionPickAddons .addons label #check3 img, .sectionFinish .addons label #check3 img, .sectionConfirming .addons label #check3 img {
-    height: 15px; }
+  width: 100%;
+}
+.sectionPickAddons .addons label #check, .sectionFinish .addons label #check, .sectionConfirming .addons label #check {
+  background: transparent;
+}
+.sectionPickAddons .addons label #check img, .sectionFinish .addons label #check img, .sectionConfirming .addons label #check img {
+  height: 15px;
+}
+.sectionPickAddons .addons label #check2 img, .sectionFinish .addons label #check2 img, .sectionConfirming .addons label #check2 img {
+  height: 15px;
+}
+.sectionPickAddons .addons label #check3 img, .sectionFinish .addons label #check3 img, .sectionConfirming .addons label #check3 img {
+  height: 15px;
+}
 .sectionPickAddons .addons input, .sectionFinish .addons input, .sectionConfirming .addons input {
-  display: none; }
+  display: none;
+}
 .sectionPickAddons .addons #selectAddonOnline:checked ~ .lblAddonOnline, .sectionFinish .addons #selectAddonOnline:checked ~ .lblAddonOnline, .sectionConfirming .addons #selectAddonOnline:checked ~ .lblAddonOnline {
-  border: solid 1px #473dff; }
-  .sectionPickAddons .addons #selectAddonOnline:checked ~ .lblAddonOnline #check, .sectionFinish .addons #selectAddonOnline:checked ~ .lblAddonOnline #check, .sectionConfirming .addons #selectAddonOnline:checked ~ .lblAddonOnline #check {
-    background-color: #473dff; }
+  border: solid 1px hsl(243, 100%, 62%);
+}
+.sectionPickAddons .addons #selectAddonOnline:checked ~ .lblAddonOnline #check, .sectionFinish .addons #selectAddonOnline:checked ~ .lblAddonOnline #check, .sectionConfirming .addons #selectAddonOnline:checked ~ .lblAddonOnline #check {
+  background-color: hsl(243, 100%, 62%);
+}
 .sectionPickAddons .addons #selectAddonStorage:checked ~ .lblAddonStorage, .sectionFinish .addons #selectAddonStorage:checked ~ .lblAddonStorage, .sectionConfirming .addons #selectAddonStorage:checked ~ .lblAddonStorage {
-  border: solid 1px #473dff; }
-  .sectionPickAddons .addons #selectAddonStorage:checked ~ .lblAddonStorage #check2, .sectionFinish .addons #selectAddonStorage:checked ~ .lblAddonStorage #check2, .sectionConfirming .addons #selectAddonStorage:checked ~ .lblAddonStorage #check2 {
-    background-color: #473dff; }
+  border: solid 1px hsl(243, 100%, 62%);
+}
+.sectionPickAddons .addons #selectAddonStorage:checked ~ .lblAddonStorage #check2, .sectionFinish .addons #selectAddonStorage:checked ~ .lblAddonStorage #check2, .sectionConfirming .addons #selectAddonStorage:checked ~ .lblAddonStorage #check2 {
+  background-color: hsl(243, 100%, 62%);
+}
 .sectionPickAddons .addons #selectAddonCustom:checked ~ .lblAddonCustom, .sectionFinish .addons #selectAddonCustom:checked ~ .lblAddonCustom, .sectionConfirming .addons #selectAddonCustom:checked ~ .lblAddonCustom {
-  border: solid 1px #473dff; }
-  .sectionPickAddons .addons #selectAddonCustom:checked ~ .lblAddonCustom #check3, .sectionFinish .addons #selectAddonCustom:checked ~ .lblAddonCustom #check3, .sectionConfirming .addons #selectAddonCustom:checked ~ .lblAddonCustom #check3 {
-    background-color: #473dff; }
+  border: solid 1px hsl(243, 100%, 62%);
+}
+.sectionPickAddons .addons #selectAddonCustom:checked ~ .lblAddonCustom #check3, .sectionFinish .addons #selectAddonCustom:checked ~ .lblAddonCustom #check3, .sectionConfirming .addons #selectAddonCustom:checked ~ .lblAddonCustom #check3 {
+  background-color: hsl(243, 100%, 62%);
+}
 .sectionPickAddons .btnBack2, .sectionFinish .btnBack2, .sectionConfirming .btnBack2 {
   position: absolute;
   left: 0;
-  top: 580px; }
+  top: 580px;
+}
 .sectionPickAddons .btn2, .sectionFinish .btn2, .sectionConfirming .btn2 {
   position: absolute;
   right: 0;
   top: 570px;
   padding: 12px;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .sectionFinish .todos-los-servicios, .sectionConfirming .todos-los-servicios {
   padding: 20px;
   padding-top: 30px;
-  box-shadow: 0px 10px 11px -2px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0px 10px 11px -2px rgba(0, 0, 0, 0.4);
+}
 .sectionFinish .planSelects .planSelecting .changePlan, .sectionConfirming .planSelects .planSelecting .changePlan {
   text-decoration: underline 2px solid;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .sectionConfirming {
   padding: 50px;
-  width: 90%; }
-  .sectionConfirming .imgConfirming {
-    height: 60px;
+  width: 90%;
+}
+.sectionConfirming .imgConfirming {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .containerPrincipal {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
     justify-content: center;
-    width: 100%; }
+    position: relative;
+    align-items: center;
+  }
+  .containerPrincipal .header {
+    background: url(./images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30vh;
+    height: 70%;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: start;
+    align-items: start;
+    left: 8%;
+    border-radius: 20px;
+  }
+  .containerPrincipal .header .containNumber {
+    display: flex;
+    align-items: center;
+  }
+  .containerPrincipal .header .containNumber p {
+    position: relative;
+    left: -10px;
+  }
+  .containerPrincipal .header .containNumber div {
+    margin: 20px 0px 20px 20px;
+  }
+  .containerPrincipal .containerSections {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+  .containerPrincipal .containerSections .sectionForm, .containerPrincipal .containerSections .sectionPlan, .containerPrincipal .containerSections .sectionPickAddons, .containerPrincipal .containerSections .sectionFinish, .containerPrincipal .containerSections .sectionConfirming {
+    height: 70%;
+    width: 50%;
+    /* width: auto; */
+    top: 50%;
+    left: 55%;
+  }
+  .containerPrincipal .containerSections .sectionForm .btn, .containerPrincipal .containerSections .sectionPlan .btn, .containerPrincipal .containerSections .sectionPickAddons .btn, .containerPrincipal .containerSections .sectionFinish .btn, .containerPrincipal .containerSections .sectionConfirming .btn {
+    top: 510px;
+    right: 25px;
+  }
+  .containerPrincipal .containerSections .sectionForm .btnBack, .containerPrincipal .containerSections .sectionPlan .btnBack, .containerPrincipal .containerSections .sectionPickAddons .btnBack, .containerPrincipal .containerSections .sectionFinish .btnBack, .containerPrincipal .containerSections .sectionConfirming .btnBack {
+    top: 520px;
+  }
+  .containerPrincipal .containerSections .sectionPickAddons .btnBack2, .containerPrincipal .containerSections .sectionFinish .btnBack2, .containerPrincipal .containerSections .sectionConfirming .btnBack2 {
+    top: 520px;
+  }
+  .containerPrincipal .containerSections .sectionFinish .btn2, .containerPrincipal .containerSections .sectionConfirming .btn2 {
+    top: 510px;
+  }
+  .containerPrincipal .containerSections .sectionConfirming {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,9 @@
     background: url(./images/bg-sidebar-mobile.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+
     .status{
         background: hsl(206, 94%, 87%);
         color: hsl(213, 96%, 18%);
@@ -261,5 +264,89 @@
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+}
+
+
+@media(min-width: 1400px){
+
+    .containerPrincipal{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        .header{
+            background: url(./images/bg-sidebar-desktop.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 30vh;
+            height: 70%;
+            z-index: 30;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            justify-content: start;
+            align-items: start;
+            left: 8%;
+            border-radius: 20px;
+            .containNumber{
+                display: flex;
+                align-items: center;
+                p{
+                    position: relative;
+                    left: -10px;
+                }
+                div{
+                    margin: 20px 0px 20px 20px;
+    
+                }
+            }
+            
+        }
+        .containerSections{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            .sectionForm{
+                height: 70%;
+                width: 50%;
+                /* width: auto; */
+                top: 50%;
+                left: 55%;
+                .btn{
+                    top:510px;
+                    right: 25px;
+                    
+                }
+                .btnBack{
+                    top: 520px;
+                }
+                
+            }
+            .sectionPickAddons{
+                .btnBack2{
+                    top: 520px;
+                }
+            }
+            .sectionFinish{
+                .btn2{
+                    top: 510px;
+                }
+            }
+            .sectionConfirming{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        
+    
+        
     }
 }
